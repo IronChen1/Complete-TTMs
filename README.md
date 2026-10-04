@@ -1,4 +1,3 @@
-
 # Complete-TTMs
 
 Complete total-transmission modes (TTMs) of Kerr black holes.
@@ -74,6 +73,21 @@ lambda = C{j,2}(:,3);
 
 The data are organized separately for the four \(n_\infty\) families.
 
+## Numerical precision and high-precision data
+
+The `.mat` files provided in this repository are intended primarily for convenient data access, analysis, and visualization in MATLAB. The numerical values in these files are stored at machine precision and therefore do not retain all digits of the original high-precision Mathematica calculations.
+
+The complete high-precision datasets will be released separately on [Zenodo](https://zenodo.org/) in Wolfram Mathematica `.mx` format. These datasets preserve the full numerical precision used in the calculations, with the TTM solutions verified to residuals of approximately \(10^{-50}\) or smaller.
+
+The `.mx` files can be loaded directly in Wolfram Mathematica, allowing the stored high-precision values of \(\omega\) and \(\lambda\) to be used without the precision loss introduced in the MATLAB datasets.
+
+In summary:
+
+- `.mat` files: machine-precision data for convenient MATLAB analysis and visualization;
+- `.mx` files: full high-precision data for precision-sensitive calculations and numerical verification.
+
+The Zenodo DOI and download link will be added here after the high-precision dataset is released.
+
 ## Visualization
 
 MATLAB plotting codes are provided in `Codes/MATLAB/`.
@@ -141,7 +155,7 @@ Data/TTM_merged_Ninf3_M7.mat
 
 selects the required \((\ell,m)\) sequence, and uses the data point nearest to `a0` as the initial guess.
 
-To make the example independent of the stored high-precision solution, the initial values of \(\omega\) and \(\lambda\) are rounded to five decimal places before calling `FindRoot`.
+The dataset is used only to provide an initial guess. The initial values of \(\omega\) and \(\lambda\) are rounded to five decimal places before calling high-precision `FindRoot`, so the final solution is obtained independently of the stored numerical precision of the `.mat` file.
 
 The numerical solution is then verified through the residual
 
@@ -155,11 +169,11 @@ where \(F_1=F_2=0\) are the two TTM equations implemented in `HCTTMKerrYChen`.
 
 ### MATLAB
 
-Used for loading the datasets and producing the visualizations.
+Used for loading the `.mat` datasets and producing the visualizations.
 
 ### Wolfram Mathematica
 
-Used for the high-precision TTM root-finding example. The calculation uses `HeunC` and `HeunCPrime`.
+Used for the high-precision TTM root-finding example and for reading the full-precision `.mx` datasets. The calculation uses `HeunC` and `HeunCPrime`.
 
 ## How to cite
 
@@ -175,4 +189,4 @@ If you use this dataset or the accompanying codes, please cite:
     month = "9",
     year = "2026"
 }
-
+```

@@ -7,6 +7,21 @@ The dataset and codes are developed and maintained by **Changkai Chen**.
 
 The TTM dataset will be continuously updated.
 
+## How to cite
+
+If you use this dataset or the accompanying codes, please cite:
+
+```text
+@article{Chen:2026ane,
+    author = "Chen, Changkai and Zhang, Xiaohua and Cao, Zhoujian and Jing, Jiliang and Long, Sheng",
+    title = "{Complete total-transmission modes of Kerr black holes}",
+    eprint = "2609.39609",
+    archivePrefix = "arXiv",
+    primaryClass = "gr-qc",
+    month = "9",
+    year = "2026"
+}
+
 ## Repository structure
 
 ```text
@@ -161,19 +176,4 @@ Used for loading the datasets and producing the visualizations.
 
 Used for the high-precision TTM root-finding example. The calculation uses `HeunC` and `HeunCPrime`.
 
-## How to cite
 
-If you use this dataset or the accompanying codes, please cite:
-
-```text
-@article{Chen:2026ane,
-    author = "Chen, Changkai and Zhang, Xiaohua and Cao, Zhoujian and Jing, Jiliang and Long, Sheng",
-    title = "{Complete total-transmission modes of Kerr black holes}",
-    eprint = "2609.39609",
-    archivePrefix = "arXiv",
-    primaryClass = "gr-qc",
-    month = "9",
-    year = "2026"
-}
-```
-```
